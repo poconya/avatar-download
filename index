@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>会場限定 アバターダウンロードページ</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1>会場限定</h1>
+        <h2>アバターダウンロードページ</h2>
+
+        <div class="character-select">
+
+            <button onclick="selectCharacter(1)">
+                <img src="images/character1.png" alt="キャラクター1">
+            </button>
+
+            <button onclick="selectCharacter(2)">
+                <img src="images/character2.png" alt="キャラクター2">
+            </button>
+
+            <button onclick="selectCharacter(3)">
+                <img src="images/character3.png" alt="キャラクター3">
+            </button>
+
+            <button onclick="selectCharacter(4)">
+                <img src="images/character4.png" alt="キャラクター4">
+            </button>
+
+        </div>
+
+        <section class="download-area">
+
+            <img id="preview"
+                 src="images/character1.png"
+                 alt="選択したキャラクター">
+
+            <button id="download-button" onclick="downloadCharacter()">
+                ダウンロード
+            </button>
+
+        </section>
+
+        <section class="rules">
+
+            <h2>使用ルール</h2>
+
+            <h3>⭕ OK</h3>
+
+            <ul>
+                <li>pictSQUARE内での使用</li>
+                <li>スクリーンショット・動画撮影</li>
+                <li>SNSへの掲載</li>
+            </ul>
+
+            <h3>❌ NG</h3>
+
+            <ul>
+                <li>加工・改変</li>
+                <li>自作発言</li>
+                <li>二次配布</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
