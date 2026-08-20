@@ -1,4 +1,6 @@
-/* 全体 */
+/* =========================
+   全体
+   ========================= */
 
 * {
   box-sizing: border-box;
@@ -22,12 +24,12 @@ body {
 }
 
 
-/* ページ全体 */
+/* =========================
+   ページ全体
+   ========================= */
 
 .container {
-
   width: 100%;
-
   max-width: 700px;
 
   margin: 0 auto;
@@ -38,28 +40,50 @@ body {
 }
 
 
-/* タイトル */
+/* =========================
+   タイトル
+   ========================= */
+
+/*
+  タイトルだけ
+  Zen Old Mincho
+*/
 
 h1 {
-
   margin: 0;
+
+  font-family:
+    "Zen Old Mincho",
+    serif;
 
   font-size: 32px;
 
-  color: #ff1493;
+  font-weight: 700;
+
+  color: #8a682f;
 }
 
 
-h2 {
-
+.page-title {
   margin: 8px 0 20px;
 
-  font-size: 24px;
+  font-family:
+    "Zen Old Mincho",
+    serif;
+
+  font-size: 26px;
+
+  font-weight: 700;
+
+  color: #8a682f;
 }
 
 
-.intro {
+/* =========================
+   説明文
+   ========================= */
 
+.intro {
   margin-bottom: 25px;
 
   font-size: 16px;
@@ -71,7 +95,6 @@ h2 {
    ========================= */
 
 .character-select {
-
   display: grid;
 
   grid-template-columns:
@@ -90,7 +113,6 @@ h2 {
 /* キャラクター選択ボタン */
 
 .character-button {
-
   border: 3px solid transparent;
 
   background: white;
@@ -108,15 +130,13 @@ h2 {
 
 
 .character-button:hover {
-
-  border-color: #ff1493;
+  border-color: #b08a45;
 
   transform: scale(1.03);
 }
 
 
 .character-button:active {
-
   transform: scale(0.95);
 }
 
@@ -124,7 +144,6 @@ h2 {
 /* 選択用画像 */
 
 .character-button img {
-
   width: 100%;
 
   height: auto;
@@ -140,7 +159,6 @@ h2 {
    ========================= */
 
 .download-area {
-
   margin-top: 25px;
 
   padding: 20px;
@@ -152,19 +170,17 @@ h2 {
 
 
 #selected-name {
+  margin: 5px 0 15px;
 
   font-size: 20px;
 
   font-weight: bold;
-
-  margin: 5px 0 15px;
 }
 
 
 /* 選択したキャラクター */
 
 .selected-image {
-
   display: block;
 
   width: min(80vw, 400px);
@@ -182,12 +198,11 @@ h2 {
    ========================= */
 
 .download-button {
-
   display: inline-block;
 
   padding: 12px 30px;
 
-  background: #ff1493;
+  background: #8a682f;
 
   color: white;
 
@@ -202,7 +217,6 @@ h2 {
 
 
 .download-button:hover {
-
   opacity: 0.85;
 }
 
@@ -212,7 +226,6 @@ h2 {
    ========================= */
 
 .rules {
-
   margin-top: 30px;
 
   padding: 25px 20px;
@@ -225,48 +238,64 @@ h2 {
 }
 
 
+/*
+  使用ルールの見出しは
+  Zen Old Minchoにしない
+*/
+
 .rules h2 {
+  margin-top: 0;
 
   text-align: center;
 
-  margin-top: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Yu Gothic",
+    sans-serif;
+
+  font-size: 22px;
 }
 
 
-.rules p {
+.rules h3 {
+  margin-top: 22px;
 
-  font-weight: bold;
+  margin-bottom: 8px;
+
+  font-size: 17px;
 }
 
 
 .rules ul {
+  margin-top: 5px;
 
   padding-left: 25px;
 }
 
 
 .rules li {
-
   margin: 8px 0;
+
+  line-height: 1.6;
 }
 
 
-.rules .notice {
+.notice {
+  font-size: 14px;
 
-  margin-top: 20px;
-
-  font-weight: normal;
+  line-height: 1.6;
 }
 
 
 /* =========================
-   スマホ用
+   スマホ
    ========================= */
 
 @media (max-width: 600px) {
 
   .container {
-
     padding:
       25px
       10px
@@ -275,19 +304,16 @@ h2 {
 
 
   h1 {
-
     font-size: 28px;
   }
 
 
-  h2 {
-
-    font-size: 21px;
+  .page-title {
+    font-size: 23px;
   }
 
 
   .intro {
-
     font-size: 14px;
   }
 
@@ -295,7 +321,6 @@ h2 {
   /* 4人を横一列 */
 
   .character-select {
-
     gap: 5px;
 
     padding: 10px;
@@ -303,7 +328,6 @@ h2 {
 
 
   .character-button {
-
     padding: 3px;
 
     border-width: 2px;
@@ -313,7 +337,6 @@ h2 {
   /* 選択後の画像 */
 
   .selected-image {
-
     width: 75vw;
 
     max-width: 350px;
@@ -321,7 +344,6 @@ h2 {
 
 
   .download-button {
-
     font-size: 18px;
 
     padding:
@@ -331,7 +353,6 @@ h2 {
 
 
   .rules {
-
     padding:
       20px
       16px;
