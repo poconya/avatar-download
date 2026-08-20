@@ -374,3 +374,43 @@ h1 {
   }
 
 }
+
+/* =========================
+   星空
+   ========================= */
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 55vh;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,240,190,0.8) 1.5px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1.5px);
+
+  background-size:
+    97px 83px,
+    151px 127px,
+    211px 173px;
+
+  background-position:
+    10px 20px,
+    50px 70px,
+    120px 30px;
+
+  z-index: 0;
+}
+
+
+/* ページの内容を星より前にする */
+
+.container {
+  position: relative;
+  z-index: 1;
+}
