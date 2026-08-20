@@ -6,9 +6,11 @@ body {
 }
 
 main {
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 30px 20px 60px;
+    padding: 20px 10px 50px;
+    box-sizing: border-box;
 }
 
 /* タイトル */
@@ -16,14 +18,15 @@ main {
 h1 {
     margin: 10px 0 0;
     color: #ff1493;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 h2 {
-    margin: 5px 0 30px;
+    margin: 5px 0 25px;
     color: #ff1493;
-    font-size: 26px;
+    font-size: 22px;
 }
+
 
 /* キャラクター選択 */
 
@@ -31,42 +34,55 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
 
     background: white;
-    padding: 20px;
+    padding: 12px 5px;
     border-radius: 10px;
+
+    box-sizing: border-box;
 }
 
 .character-select button {
     background: none;
     border: none;
-    padding: 5px;
+    padding: 3px;
     cursor: pointer;
+
+    flex: 1;
+    max-width: 90px;
 }
 
 .character-select img {
-    width: 96px;
-    height: 96px;
+    width: 100%;
+    height: auto;
+    max-width: 80px;
+
     image-rendering: pixelated;
 }
+
 
 /* 選択した画像 */
 
 .download-area {
-    margin-top: 30px;
+    margin-top: 20px;
     background: white;
-    padding: 30px 20px;
+    padding: 20px 10px 25px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 #preview {
-    width: 300px;
-    max-width: 80%;
+    width: 280px;
+    max-width: 90%;
+    height: auto;
+
     image-rendering: pixelated;
+
     display: block;
-    margin: 0 auto 25px;
+    margin: 0 auto 20px;
 }
+
 
 /* ダウンロードボタン */
 
@@ -74,25 +90,26 @@ h2 {
     border: none;
     background: #ff1493;
     color: white;
-    font-size: 22px;
+
+    font-size: 20px;
     font-weight: bold;
-    padding: 12px 35px;
+
+    padding: 12px 30px;
     border-radius: 30px;
+
     cursor: pointer;
 }
 
-#download-button:hover {
-    opacity: 0.8;
-}
 
 /* 使用ルール */
 
 .rules {
-    margin-top: 40px;
+    margin-top: 25px;
     background: white;
-    padding: 25px;
+    padding: 20px;
     text-align: left;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .rules h2 {
@@ -100,28 +117,52 @@ h2 {
 }
 
 .rules h3 {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .rules li {
     margin: 8px 0;
 }
 
+
 /* スマホ */
 
 @media (max-width: 600px) {
 
+    main {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
     .character-select {
-        gap: 5px;
-        padding: 10px;
+        gap: 2px;
+        padding: 10px 3px;
+    }
+
+    .character-select button {
+        max-width: 75px;
     }
 
     .character-select img {
-        width: 70px;
-        height: 70px;
+        max-width: 68px;
     }
 
     #preview {
         width: 250px;
+        max-width: 85%;
     }
+
+    #download-button {
+        font-size: 18px;
+        padding: 11px 28px;
+    }
+
 }
