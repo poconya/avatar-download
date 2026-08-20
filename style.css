@@ -620,3 +620,13 @@ h1 {
   }
 
 }
+/* スマホ用：キラッ星の位置調整 */
+
+@media (max-width: 600px) {
+
+  .bright-stars span:nth-child(3) {
+    top: 70% !important;
+    left: 10% !important;
+  }
+
+}
