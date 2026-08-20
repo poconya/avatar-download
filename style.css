@@ -11,7 +11,32 @@ body {
   margin: 0;
   padding: 0;
 
-  background: #ffe1ad;
+  background:
+    radial-gradient(
+      circle at 75% 15%,
+      rgba(255, 235, 170, 0.18) 0,
+      rgba(255, 235, 170, 0.08) 80px,
+      transparent 180px
+    ),
+    linear-gradient(
+      180deg,
+      #101b3d 0%,
+      #182951 45%,
+      #3c3650 72%,
+      #8a6548 100%
+    );
+
+  background-attachment: fixed;
+
+  color: #333;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Yu Gothic",
+    sans-serif;
+}
 
   color: #333;
 
