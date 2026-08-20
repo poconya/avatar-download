@@ -18,14 +18,15 @@ body {
       rgba(255, 235, 170, 0.08) 80px,
       transparent 180px
     ),
-  linear-gradient(
-  180deg,
-  #101b3d 0%,
-  #182951 30%,
-  #3c3650 50%,
-  #8a6548 75%,
-  #b8784e 100%
-)
+    linear-gradient(
+      180deg,
+      #101b3d 0%,
+      #182951 30%,
+      #3c3650 50%,
+      #8a6548 75%,
+      #b8784e 100%
+    );
+
   background-attachment: fixed;
 
   color: #333;
