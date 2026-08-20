@@ -7,6 +7,11 @@
 
   <title>会場限定 アバターダウンロードページ</title>
 
+  <!-- Zen Old Mincho -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,7 +22,11 @@
 
     <!-- タイトル -->
     <h1>会場限定</h1>
-    <h2>アバターダウンロードページ</h2>
+
+    <h2 class="page-title">
+      アバターダウンロードページ
+    </h2>
+
 
     <p class="intro">
       ダウンロードしたいキャラクターを選択してください。
@@ -27,7 +36,6 @@
     <!-- キャラクター選択 -->
     <section class="character-select">
 
-      <!-- ラト -->
       <button
         class="character-button"
         onclick="selectCharacter('lato')"
@@ -39,7 +47,6 @@
       </button>
 
 
-      <!-- ユーハン -->
       <button
         class="character-button"
         onclick="selectCharacter('yuhan')"
@@ -51,7 +58,6 @@
       </button>
 
 
-      <!-- ロノ -->
       <button
         class="character-button"
         onclick="selectCharacter('lono')"
@@ -63,7 +69,6 @@
       </button>
 
 
-      <!-- バスティン -->
       <button
         class="character-button"
         onclick="selectCharacter('bastien')"
@@ -109,30 +114,37 @@
     <!-- 使用ルール -->
     <section class="rules">
 
-      <h2>使用ルール</h2>
+      <h2>■使用ルール■</h2>
 
 
-      <p>⭕ OK</p>
+      <h3>－OK－</h3>
 
       <ul>
-        <li>pictSQUARE内での使用</li>
-        <li>スクリーンショット・動画撮影</li>
-        <li>SNSへの掲載</li>
+        <li>pict SQUARE(ピクスク)内での使用（使用報告不要）</li>
+        <li>スクショ・動画撮影・SNSへの掲載</li>
       </ul>
 
 
-      <p>❌ NG</p>
+      <h3>－NG－</h3>
 
       <ul>
-        <li>画像の加工・改変</li>
+        <li>加工・改変</li>
         <li>自作発言</li>
         <li>二次配布</li>
       </ul>
 
 
-      <p class="notice">
-        その他の用途で使用したい場合は、事前にご連絡ください。
-      </p>
+      <h3>－要連絡－</h3>
+
+      <ul>
+        <li>
+          pict SQUARE外での使用
+          <br>
+          <span class="notice">
+            → 使用を希望される場合は、事前にご連絡ください
+          </span>
+        </li>
+      </ul>
 
     </section>
 
@@ -140,8 +152,6 @@
 
 
   <script>
-
-    /* キャラクター情報 */
 
     const characters = {
 
@@ -175,12 +185,9 @@
     };
 
 
-    /* キャラクターを選択 */
-
     function selectCharacter(id) {
 
       const character = characters[id];
-
 
       const image =
         document.getElementById("selected-image");
@@ -192,20 +199,12 @@
         document.getElementById("download-button");
 
 
-      /* 選択した画像を表示 */
-
       image.src = character.image;
 
       image.alt = character.name;
 
-
-      /* キャラクター名 */
-
       name.textContent =
         character.name + " を選択中";
-
-
-      /* ダウンロード */
 
       button.href = character.image;
 
