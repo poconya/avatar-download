@@ -1,78 +1,222 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>会場限定 アバターダウンロードページ</title>
+  <title>会場限定 アバターダウンロードページ</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-    <main>
+  <main class="container">
 
-        <h1>会場限定</h1>
-        <h2>アバターダウンロードページ</h2>
+    <!-- タイトル -->
+    <h1>会場限定</h1>
+    <h2>アバターダウンロードページ</h2>
 
-        <div class="character-select">
+    <p class="intro">
+      ダウンロードしたいキャラクターを選択してください。
+    </p>
 
-            <button onclick="selectCharacter(1)">
-                <img src="images/character1.png" alt="キャラクター1">
-            </button>
 
-            <button onclick="selectCharacter(2)">
-                <img src="images/character2.png" alt="キャラクター2">
-            </button>
+    <!-- キャラクター選択 -->
+    <section class="character-select">
 
-            <button onclick="selectCharacter(3)">
-                <img src="images/character3.png" alt="キャラクター3">
-            </button>
+      <!-- ラト -->
+      <button
+        class="character-button"
+        onclick="selectCharacter('lato')"
+      >
+        <img
+          src="images/s_la.png"
+          alt="ラト"
+        >
+      </button>
 
-            <button onclick="selectCharacter(4)">
-                <img src="images/character4.png" alt="キャラクター4">
-            </button>
 
-        </div>
+      <!-- ユーハン -->
+      <button
+        class="character-button"
+        onclick="selectCharacter('yuhan')"
+      >
+        <img
+          src="images/s_yu.png"
+          alt="ユーハン"
+        >
+      </button>
 
-        <section class="download-area">
 
-            <img id="preview"
-                 src="images/character1.png"
-                 alt="選択したキャラクター">
+      <!-- ロノ -->
+      <button
+        class="character-button"
+        onclick="selectCharacter('lono')"
+      >
+        <img
+          src="images/s_lo.png"
+          alt="ロノ"
+        >
+      </button>
 
-            <button id="download-button" onclick="downloadCharacter()">
-                ダウンロード
-            </button>
 
-        </section>
+      <!-- バスティン -->
+      <button
+        class="character-button"
+        onclick="selectCharacter('bastien')"
+      >
+        <img
+          src="images/s_ba.png"
+          alt="バスティン"
+        >
+      </button>
 
-        <section class="rules">
+    </section>
 
-            <h2>使用ルール</h2>
 
-            <h3>⭕ OK</h3>
+    <!-- 選択したキャラクター -->
+    <section class="download-area">
 
-            <ul>
-                <li>pictSQUARE内での使用</li>
-                <li>スクリーンショット・動画撮影</li>
-                <li>SNSへの掲載</li>
-            </ul>
+      <p id="selected-name">
+        キャラクターを選択してください
+      </p>
 
-            <h3>❌ NG</h3>
 
-            <ul>
-                <li>加工・改変</li>
-                <li>自作発言</li>
-                <li>二次配布</li>
-            </ul>
+      <img
+        id="selected-image"
+        class="selected-image"
+        src=""
+        alt=""
+      >
 
-        </section>
 
-    </main>
+      <a
+        id="download-button"
+        class="download-button"
+        href="#"
+        download
+        style="display:none;"
+      >
+        ダウンロード
+      </a>
 
-    <script src="script.js"></script>
+    </section>
+
+
+    <!-- 使用ルール -->
+    <section class="rules">
+
+      <h2>使用ルール</h2>
+
+
+      <p>⭕ OK</p>
+
+      <ul>
+        <li>pictSQUARE内での使用</li>
+        <li>スクリーンショット・動画撮影</li>
+        <li>SNSへの掲載</li>
+      </ul>
+
+
+      <p>❌ NG</p>
+
+      <ul>
+        <li>画像の加工・改変</li>
+        <li>自作発言</li>
+        <li>二次配布</li>
+      </ul>
+
+
+      <p class="notice">
+        その他の用途で使用したい場合は、事前にご連絡ください。
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    /* キャラクター情報 */
+
+    const characters = {
+
+      lato: {
+        name: "ラト",
+        image: "images/Sabaku_lato.png",
+        filename: "Sabaku_lato.png"
+      },
+
+
+      yuhan: {
+        name: "ユーハン",
+        image: "images/Sabaku_yuhan.png",
+        filename: "Sabaku_yuhan.png"
+      },
+
+
+      lono: {
+        name: "ロノ",
+        image: "images/Sabaku_lono.png",
+        filename: "Sabaku_lono.png"
+      },
+
+
+      bastien: {
+        name: "バスティン",
+        image: "images/Sabaku_Bastien.png",
+        filename: "Sabaku_Bastien.png"
+      }
+
+    };
+
+
+    /* キャラクターを選択 */
+
+    function selectCharacter(id) {
+
+      const character = characters[id];
+
+
+      const image =
+        document.getElementById("selected-image");
+
+      const name =
+        document.getElementById("selected-name");
+
+      const button =
+        document.getElementById("download-button");
+
+
+      /* 選択した画像を表示 */
+
+      image.src = character.image;
+
+      image.alt = character.name;
+
+
+      /* キャラクター名 */
+
+      name.textContent =
+        character.name + " を選択中";
+
+
+      /* ダウンロード */
+
+      button.href = character.image;
+
+      button.download = character.filename;
+
+      button.style.display = "inline-block";
+
+    }
+
+  </script>
 
 </body>
+
 </html>
