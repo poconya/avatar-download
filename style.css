@@ -392,7 +392,11 @@ h1 {
       20px
       16px;
   }
-
+  /* スマホ：下側のキラッ星を左下へ */
+  .bright-stars span:nth-child(3) {
+    top: 48%;
+    left: 25%;
+  }
 }
 
 /* =========================
@@ -600,10 +604,10 @@ h1 {
       90deg,
       transparent 0%,
       rgba(255, 235, 190, 0.15) 20%,
-      rgba(255, 235, 190, 0.85) 42%,
-      transparent 47%,
-      transparent 53%,
-      rgba(255, 235, 190, 0.85) 58%,
+      rgba(255, 235, 190, 0.85) 40%,
+      transparent 46%,
+      transparent 54%,
+      rgba(255, 235, 190, 0.85) 60%,
       rgba(255, 235, 190, 0.15) 80%,
       transparent 100%
     );
