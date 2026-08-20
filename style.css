@@ -109,7 +109,6 @@ h1 {
 /* =========================
    キャラクター選択
    ========================= */
-
 .character-select {
   display: grid;
 
@@ -118,7 +117,7 @@ h1 {
 
   gap: 10px;
 
-  background: rgba(255, 255, 255, 0.78);
+  background: transparent;
 
   padding: 15px;
 
@@ -127,11 +126,12 @@ h1 {
 
 
 /* キャラクター選択ボタン */
-
 .character-button {
+  position: relative;
+
   border: 3px solid transparent;
 
-  background: rgba(255, 255, 255, 0.78);
+  background: transparent;
 
   border-radius: 10px;
 
@@ -143,7 +143,25 @@ h1 {
     transform 0.15s,
     border-color 0.15s;
 }
+.character-button::after {
+  content: "";
 
+  position: absolute;
+
+  left: 15%;
+  right: 15%;
+  bottom: 5px;
+
+  height: 18px;
+
+  background: rgba(255, 220, 150, 0.28);
+
+  border-radius: 50%;
+
+  filter: blur(7px);
+
+  z-index: -1;
+}
 
 .character-button:hover {
   border-color: #b08a45;
