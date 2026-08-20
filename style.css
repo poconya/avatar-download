@@ -538,8 +538,8 @@ h1 {
 
   transform: translate(-50%, -50%);
 
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
 
   color: transparent;
 
@@ -600,7 +600,10 @@ h1 {
       90deg,
       transparent 0%,
       rgba(255, 235, 190, 0.15) 20%,
-      rgba(255, 235, 190, 0.85) 50%,
+      rgba(255, 235, 190, 0.85) 42%,
+      transparent 47%,
+      transparent 53%,
+      rgba(255, 235, 190, 0.85) 58%,
       rgba(255, 235, 190, 0.15) 80%,
       transparent 100%
     );
