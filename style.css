@@ -117,7 +117,7 @@ h1 {
 
   gap: 10px;
 
-  background: white;
+  background: rgba(255, 255, 255, 0.78);
 
   padding: 15px;
 
@@ -130,7 +130,7 @@ h1 {
 .character-button {
   border: 3px solid transparent;
 
-  background: white;
+  background: rgba(255, 255, 255, 0.78);
 
   border-radius: 10px;
 
@@ -178,7 +178,7 @@ h1 {
 
   padding: 20px;
 
-  background: white;
+  background: rgba(255, 255, 255, 0.78);
 
   border-radius: 12px;
 }
@@ -245,7 +245,7 @@ h1 {
 
   padding: 25px 20px;
 
-  background: white;
+  background:  rgba(255, 255, 255, 0.78);
 
   border-radius: 12px;
 
