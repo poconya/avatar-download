@@ -462,16 +462,32 @@ h1 {
   text-shadow:
     0 0 6px rgba(255, 240, 190, 0.9),
     0 0 14px rgba(255, 240, 190, 0.6);
+
+  animation: twinkle 3s ease-in-out infinite;
 }
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
 
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
 
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+}
 /* 1個目 */
 
 .bright-stars span:nth-child(1) {
   top: 12%;
   left: 18%;
-
   font-size: 18px;
+  animation-delay: 0s;
 }
 
 
@@ -480,8 +496,8 @@ h1 {
 .bright-stars span:nth-child(2) {
   top: 22%;
   left: 72%;
-
   font-size: 13px;
+  animation-delay: 1.2s;
 }
 
 
@@ -490,9 +506,10 @@ h1 {
 .bright-stars span:nth-child(3) {
   top: 40%;
   left: 42%;
-
   font-size: 21px;
+  animation-delay: 2.1s;
 }
+
 
 
 /* 4個目 */
@@ -500,16 +517,15 @@ h1 {
 .bright-stars span:nth-child(4) {
   top: 8%;
   left: 52%;
-
   font-size: 14px;
+  animation-delay: 0.7s;
 }
-
 
 /* 5個目 */
 
 .bright-stars span:nth-child(5) {
   top: 34%;
   left: 88%;
-
   font-size: 17px;
+  animation-delay: 1.7s;
 }
