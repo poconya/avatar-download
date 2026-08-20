@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    background: #ffe4b5;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+/* タイトル */
+
+h1 {
+    margin: 10px 0 0;
+    color: #ff1493;
+    font-size: 32px;
+}
+
+h2 {
+    margin: 5px 0 30px;
+    color: #ff1493;
+    font-size: 26px;
+}
+
+/* キャラクター選択 */
+
+.character-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.character-select button {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.character-select img {
+    width: 96px;
+    height: 96px;
+    image-rendering: pixelated;
+}
+
+/* 選択した画像 */
+
+.download-area {
+    margin-top: 30px;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+#preview {
+    width: 300px;
+    max-width: 80%;
+    image-rendering: pixelated;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+/* ダウンロードボタン */
+
+#download-button {
+    border: none;
+    background: #ff1493;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#download-button:hover {
+    opacity: 0.8;
+}
+
+/* 使用ルール */
+
+.rules {
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.rules h2 {
+    text-align: center;
+}
+
+.rules h3 {
+    margin-top: 25px;
+}
+
+.rules li {
+    margin: 8px 0;
+}
+
+/* スマホ */
+
+@media (max-width: 600px) {
+
+    .character-select {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .character-select img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #preview {
+        width: 250px;
+    }
+}
