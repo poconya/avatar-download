@@ -1,168 +1,340 @@
-body {
-    margin: 0;
-    background: #ffe4b5;
-    font-family: sans-serif;
-    text-align: center;
+/* 全体 */
+
+* {
+  box-sizing: border-box;
 }
 
-main {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 10px 50px;
-    box-sizing: border-box;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: #ffe1ad;
+
+  color: #333;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Yu Gothic",
+    sans-serif;
 }
+
+
+/* ページ全体 */
+
+.container {
+
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 30px 16px 50px;
+
+  text-align: center;
+}
+
 
 /* タイトル */
 
 h1 {
-    margin: 10px 0 0;
-    color: #ff1493;
-    font-size: 28px;
+
+  margin: 0;
+
+  font-size: 32px;
+
+  color: #ff1493;
 }
+
 
 h2 {
-    margin: 5px 0 25px;
-    color: #ff1493;
-    font-size: 22px;
+
+  margin: 8px 0 20px;
+
+  font-size: 24px;
 }
 
 
-/* キャラクター選択 */
+.intro {
+
+  margin-bottom: 25px;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   キャラクター選択
+   ========================= */
 
 .character-select {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
 
-    background: white;
-    padding: 12px 5px;
-    border-radius: 10px;
+  display: grid;
 
-    box-sizing: border-box;
-}
+  grid-template-columns:
+    repeat(4, 1fr);
 
-.character-select button {
-    background: none;
-    border: none;
-    padding: 3px;
-    cursor: pointer;
+  gap: 10px;
 
-    flex: 1;
-    max-width: 90px;
-}
+  background: white;
 
-.character-select img {
-    width: 100%;
-    height: auto;
-    max-width: 80px;
+  padding: 15px;
 
-    image-rendering: pixelated;
+  border-radius: 12px;
 }
 
 
-/* 選択した画像 */
+/* キャラクター選択ボタン */
+
+.character-button {
+
+  border: 3px solid transparent;
+
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 5px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s,
+    border-color 0.15s;
+}
+
+
+.character-button:hover {
+
+  border-color: #ff1493;
+
+  transform: scale(1.03);
+}
+
+
+.character-button:active {
+
+  transform: scale(0.95);
+}
+
+
+/* 選択用画像 */
+
+.character-button img {
+
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  image-rendering: pixelated;
+}
+
+
+/* =========================
+   ダウンロードエリア
+   ========================= */
 
 .download-area {
-    margin-top: 20px;
-    background: white;
-    padding: 20px 10px 25px;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
 
-#preview {
-    width: 280px;
-    max-width: 90%;
-    height: auto;
+  margin-top: 25px;
 
-    image-rendering: pixelated;
+  padding: 20px;
 
-    display: block;
-    margin: 0 auto 20px;
+  background: white;
+
+  border-radius: 12px;
 }
 
 
-/* ダウンロードボタン */
+#selected-name {
 
-#download-button {
-    border: none;
-    background: #ff1493;
-    color: white;
+  font-size: 20px;
 
-    font-size: 20px;
-    font-weight: bold;
+  font-weight: bold;
 
-    padding: 12px 30px;
-    border-radius: 30px;
-
-    cursor: pointer;
+  margin: 5px 0 15px;
 }
 
 
-/* 使用ルール */
+/* 選択したキャラクター */
+
+.selected-image {
+
+  display: block;
+
+  width: min(80vw, 400px);
+
+  height: auto;
+
+  margin: 10px auto 20px;
+
+  image-rendering: pixelated;
+}
+
+
+/* =========================
+   ダウンロードボタン
+   ========================= */
+
+.download-button {
+
+  display: inline-block;
+
+  padding: 12px 30px;
+
+  background: #ff1493;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  border-radius: 30px;
+}
+
+
+.download-button:hover {
+
+  opacity: 0.85;
+}
+
+
+/* =========================
+   使用ルール
+   ========================= */
 
 .rules {
-    margin-top: 25px;
-    background: white;
-    padding: 20px;
-    text-align: left;
-    border-radius: 10px;
-    box-sizing: border-box;
+
+  margin-top: 30px;
+
+  padding: 25px 20px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  text-align: left;
 }
+
 
 .rules h2 {
-    text-align: center;
+
+  text-align: center;
+
+  margin-top: 0;
 }
 
-.rules h3 {
-    margin-top: 20px;
+
+.rules p {
+
+  font-weight: bold;
 }
+
+
+.rules ul {
+
+  padding-left: 25px;
+}
+
 
 .rules li {
-    margin: 8px 0;
+
+  margin: 8px 0;
 }
 
 
-/* スマホ */
+.rules .notice {
+
+  margin-top: 20px;
+
+  font-weight: normal;
+}
+
+
+/* =========================
+   スマホ用
+   ========================= */
 
 @media (max-width: 600px) {
 
-    main {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
+  .container {
 
-    h1 {
-        font-size: 25px;
-    }
+    padding:
+      25px
+      10px
+      40px;
+  }
 
-    h2 {
-        font-size: 20px;
-    }
 
-    .character-select {
-        gap: 2px;
-        padding: 10px 3px;
-    }
+  h1 {
 
-    .character-select button {
-        max-width: 75px;
-    }
+    font-size: 28px;
+  }
 
-    .character-select img {
-        max-width: 68px;
-    }
 
-    #preview {
-        width: 250px;
-        max-width: 85%;
-    }
+  h2 {
 
-    #download-button {
-        font-size: 18px;
-        padding: 11px 28px;
-    }
+    font-size: 21px;
+  }
+
+
+  .intro {
+
+    font-size: 14px;
+  }
+
+
+  /* 4人を横一列 */
+
+  .character-select {
+
+    gap: 5px;
+
+    padding: 10px;
+  }
+
+
+  .character-button {
+
+    padding: 3px;
+
+    border-width: 2px;
+  }
+
+
+  /* 選択後の画像 */
+
+  .selected-image {
+
+    width: 75vw;
+
+    max-width: 350px;
+  }
+
+
+  .download-button {
+
+    font-size: 18px;
+
+    padding:
+      11px
+      26px;
+  }
+
+
+  .rules {
+
+    padding:
+      20px
+      16px;
+  }
 
 }
